@@ -1,48 +1,22 @@
-import java.util.Scanner;
+# 🧮 Java Console Calculator
 
-public class Main{
+This is a simple Java-based console calculator that performs basic arithmetic operations: addition, subtraction, multiplication, division, and exponentiation. It uses Java's `Scanner` class to take user input and a `switch` expression to handle operations.
 
-    public static void main(String args[]){
+## 🚀 Features
 
-        Scanner scan = new Scanner(System.in);
+- Accepts two numeric inputs from the user
+- Supports the following operators:
+  - `+` Addition
+  - `-` Subtraction
+  - `*` Multiplication
+  - `/` Division (with zero-check)
+  - `^` Exponentiation
+- Displays the result of the operation
+- Handles invalid operators gracefully
 
-        double num1;
-        double num2;
-        char operator;
-        double result = 0;
+## 🛠️ How to Run
 
-        System.out.print("Enter the First Number: ");
-        num1 = scan.nextDouble();
-
-        System.out.print("Enter the Operator( + , -, * , / , ^): ");
-        operator = scan.next().charAt(0);
-
-        System.out.print("Enter the Second Number: ");
-        num2 = scan.nextDouble();
-
-        switch(operator){
-
-        case '+' -> result = num1 + num2;
-        case '-' -> result = num1 - num2;
-        case '*' -> result = num1 * num2;
-        case '/' -> { 
-            if(num2==0){
-                System.out.println("Cannot divide by Zero!");
-            }
-            else{
-                result = num1 / num2;
-
-            }
-        }
-        case '^' -> result = Math.pow(num1,num2);
-        default  -> {
-            System.out.println("Invalid operator");
-        }
-    }
-
-        System.out.println(result);
-
-       
-    }
-    
-}
+1. **Clone the repository**  
+   ```bash
+   git clone https://github.com/your-username/java-console-calculator.git
+   cd java-console-calculator
